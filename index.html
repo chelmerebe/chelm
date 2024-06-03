@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מכשיר קסם לריפוי והרגעה</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            background: linear-gradient(45deg, #06c5c9, #ff69b4, #06c5c9);
+            background-size: 400% 400%;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: gradientAnimation 10s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: titleAnimation 1s ease-in-out;
+        }
+        @keyframes titleAnimation {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            margin: 30px 0;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            border: 5px solid white;
+            transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            animation: imageAnimation 1s ease-in-out;
+        }
+        .product-image:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        @keyframes imageAnimation {
+            0% { transform: translateY(100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        .product-description {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            animation: descriptionAnimation 1s ease-in-out;
+        }
+        @keyframes descriptionAnimation {
+            0% { transform: translateX(-100px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #06c5c9;
+            text-decoration: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            animation: buttonAnimation 1s ease-in-out;
+            margin: 10px;
+        }
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            background: #06c5c9;
+            color: white;
+        }
+        @keyframes buttonAnimation {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            pointer-events: none;
+            animation: floatingAnimation 5s ease-in-out infinite;
+        }
+        @keyframes floatingAnimation {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>גלה את הסוד לחיים רגועים ומאושרים</h1>
+        <img class="product-image" src="קוקוקוקוקוקוקוק.jpg" alt="מכשיר קסם לריפוי והרגעה">
+        <p class="product-description">
+            הפתרון המושלם לחיים מלאי שלווה ואיזון נמצא כאן! מכשיר הקסם המהפכני שלנו, המעוצב בסגנון ייחודי ומודרני, משדר גלי אנרגיה מרפאים ומרגיעים שיעזרו לך להירגע, להירפא ולמשוך אנרגיות חיוביות לחייך. המכשיר עשוי מעץ איכותי ומלוטש המעניק לו מראה אורגני וחם, בשילוב עם טכנולוגיה חדשנית המייצרת את האפקט המרגיע של האור הכחול. הוא קומפקטי, נייד וקל לשימוש בכל מקום ובכל זמן. בין אם אתה מחפש להפחית מתח, לשפר את השינה או פשוט ליהנות מאווירה נינוחה יותר בחייך, המכשיר הזה הוא בדיוק מה שאתה צריך. עם עיצוב מרהיב וחומרים איכותיים, המכשיר הזה הוא התוספת המושלמת לכל בית.
+        </p>
+        <div class="button-container">
+
+            <a href="dddd.html" target="_blank" class="cta-button">למד עוד</a>
+        </div>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        const numElements = 20;
+
+        for (let i = 0; i < numElements; i++) {
+            const element = document.createElement('div');
+            element.classList.add('floating-element');
+            element.style.width = `${getRandomNumber(20, 100)}px`;
+            element.style.height = element.style.width;
+            element.style.left = `${getRandomNumber(0, 100)}%`;
+            element.style.bottom = `${getRandomNumber(0, 100)}%`;
+            element.style.animationDelay = `${getRandomNumber(0, 5000)}ms`;
+            element.style.animationDuration = `${getRandomNumber(5000, 10000)}ms`;
+            container.appendChild(element);
+        }
+
+        function getRandomNumber(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+    </script>
+</body>
+</html>
